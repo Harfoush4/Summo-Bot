@@ -77,7 +77,7 @@ if(BS==1){
 if(digitalRead(LTFrontLeft) == HIGH && digitalRead(LTFrontRight) == HIGH && digitalRead(LTBackRight) == HIGH && digitalRead(LTBackLeft) == HIGH ){
 
   if(digitalRead(photoElectric)== LOW || digitalRead(photoElectric2)==LOW){
-  Serial.println("for");
+  Serial.println("forward");
   digitalWrite(MotorRight1,HIGH);
     digitalWrite(MotorRight2,LOW);
     digitalWrite(MotorLeft1,HIGH);
@@ -85,7 +85,7 @@ if(digitalRead(LTFrontLeft) == HIGH && digitalRead(LTFrontRight) == HIGH && digi
   }
   else if(digitalRead(photoElectric)== HIGH && digitalRead(photoElectric2)==HIGH){
   if (distance_cm<90){
-    Serial.println("Sharp shemal");
+    Serial.println("Sharp left");
     digitalWrite(MotorRight1,HIGH);
     digitalWrite(MotorRight2,LOW);
     digitalWrite(MotorLeft1,LOW);
@@ -94,7 +94,7 @@ if(digitalRead(LTFrontLeft) == HIGH && digitalRead(LTFrontRight) == HIGH && digi
     
  }
  else if(distance_cm2<90){
-    Serial.println("Sharp yemen");
+    Serial.println("Sharp Right");
    digitalWrite(MotorRight1,LOW);
     digitalWrite(MotorRight2,HIGH);
     digitalWrite(MotorLeft1,HIGH);
@@ -117,7 +117,7 @@ if(digitalRead(LTFrontLeft) == HIGH && digitalRead(LTFrontRight) == HIGH && digi
   
 else if(digitalRead(LTFrontLeft) == HIGH && digitalRead(LTFrontRight) == LOW )//white low
   {
-    Serial.println("Odam shemal");
+    Serial.println("Front Left");
 digitalWrite(MotorRight1,LOW);
     digitalWrite(MotorRight2,HIGH);
     digitalWrite(MotorLeft1,LOW);
@@ -131,7 +131,7 @@ delay(600);
   }
   else if(digitalRead(LTFrontRight) == HIGH && digitalRead(LTFrontLeft) == LOW)
   {
-    Serial.println("Odam yemen");
+    Serial.println("Front Right");
 digitalWrite(MotorRight1,LOW);
     digitalWrite(MotorRight2,HIGH);
     digitalWrite(MotorLeft1,LOW);
@@ -146,7 +146,7 @@ delay(600);
   }
   else if(digitalRead(LTBackRight) == HIGH && digitalRead(LTFrontLeft) == LOW && digitalRead(LTFrontRight) == LOW )
   {
-    Serial.println("wara yemen");
+    Serial.println("back right");
     digitalWrite(MotorRight1,HIGH);
     digitalWrite(MotorRight2,LOW);
     digitalWrite(MotorLeft1,HIGH);
@@ -156,7 +156,7 @@ delay(600);
 
 else if(digitalRead(LTBackLeft) == HIGH && digitalRead(LTBackRight) == LOW && digitalRead(LTFrontLeft) == LOW && digitalRead(LTFrontRight) == LOW )
   {
-    Serial.println("wara Shmal");
+    Serial.println("Back Left");
     digitalWrite(MotorRight1,HIGH);
     digitalWrite(MotorRight2,LOW);
     digitalWrite(MotorLeft1,HIGH);
@@ -167,7 +167,7 @@ else if(digitalRead(LTBackLeft) == HIGH && digitalRead(LTBackRight) == LOW && di
 
 }
 else {
-  Serial.print("ana OFF");
+  Serial.print("I'm OFF");
     digitalWrite(MotorRight1,LOW);
     digitalWrite(MotorRight2,LOW);
     digitalWrite(MotorLeft1,LOW);
